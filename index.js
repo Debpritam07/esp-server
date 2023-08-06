@@ -89,6 +89,17 @@ app.get('/get_serial_data', (req, res) => {
   });
 });
 
+app.get('/', (req, res) => {
+  res.send(`
+    <h1>Available routes</h1>
+    <ul>
+      <li>/save_data?uid=123&data=hello</li>
+      <li>/get_all_data</li>
+      <li>/get_serial_data?serial=123</li>
+    </ul>
+   `);
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
