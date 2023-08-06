@@ -82,7 +82,7 @@ app.get('/get_serial_data', (req, res) => {
                 console.error('Error getting data', err.stack);
                 res.send(500, 'Error getting data');
             } else {
-                res.send(200, result.rows);
+                res.send(200, result.rows[0]["data"]);
             }
         });
     }
