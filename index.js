@@ -10,7 +10,7 @@ const config = {
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
   port: 5432,
-  ssl: true
+  ssl: {rejectUnauthorized: false}
 };
 
 app.get('/save_data', (req, res) => {
